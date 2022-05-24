@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #489cc1;
+  padding: 8%;
+}
+
+#todo-card {
+  max-width: 800px;
+  min-width: 800px;
+  max-height: 480px;
+  min-height: 480px;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 45px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#todo-card > h1 {
+  color: #535552;
+  font-size: 2.3rem;
+  font-weight: bolder;
+}
+
+#todo-form {
+  width: 100%;
+  min-height: 55px;
+  max-height: 55px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+#todo-form > :nth-child(1) {
+  width: 100%;
+  height: 55px;
+  text-align: center;
+  font-size: 1.6rem;
+  border: 2px solid #a09b63;
+  border-radius: 2px;
+  color: #026191;
+  outline: none;
+  letter-spacing: 2px;
+  font-family: monospace;
+}
+
+#todo-form > :nth-child(2) {
+  max-width: 55px;
+  min-width: 55px;
+  height: 55px;
+  margin-left: 4px;
+  border: none;
+  background: #59a3c8;
+  color: #ffff;
+  font-size: 2.1rem;
+  cursor: pointer;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== todo-item-card =========== */
+
+#todo-item-card {
+  width: 100%;
+  height: 280px;
+  margin-top: 15px;
+  overflow-y: scroll;
+}
+
+#todo-item-card::-webkit-scrollbar {
+  width: 5px;
+  background-color: #489cc1;
+}
+
+#todo-item-card::-webkit-scrollbar-thumb {
+  background-color: #a09b63;
+}
+
+#todo-item {
+  width: 100%;
+  min-height: 45px;
+  max-height: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background: #f0f9ff;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+#todo-item > :first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cheked-btn {
+  width: 19px;
+  height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#on_checked {
+  width: 10px;
+  height: 10px;
+  background-color: #7e98c8;
+  border-radius: 50%;
+}
+
+#todo-item > :first-child > span {
+  font-size: 110%;
+  padding-left: 10px;
+  color: #7e98c8;
+  letter-spacing: 1px;
+}
+
+#todo-item > :last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#todo-item > :last-child > button {
+  background: none;
+  min-width: 35px;
+  max-width: 35px;
+  min-height: 35px;
+  max-height: 35px;
+  border: none;
+  cursor: pointer;
+}
+
+#todo-item > :last-child > button > svg {
+  transition: all 0.1s ease-in-out;
+}
+
+#todo-item > :last-child > button:hover svg {
+  transform: scale(1.15);
+}
+
+/* =========== todo-bottom-bar ========== */
+
+#todo-bottom-bar {
+  width: 100%;
+  height: 35px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#todo-bottom-bar > button {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #4a9abf;
+  border: none;
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 110%;
+}
+
+#todo-bottom-bar > button > span {
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+#select-todo-item {
+  width: 40%;
+  height: 100%;
+  border: 1px solid #e2e6e9;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#select-todo-bg {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: #fbec49;
+  z-index: 1;
+}
+
+#select-todo-item > p {
+  position: absolute;
+  z-index: 9999;
+}
+
+#select-item {
+  font-weight: 600;
+  color: #4f6327;
+}
+
+#length-item {
+  font-weight: 600;
+  color: #4f6327;
+}
+
+/* ======== todo-bottom-bar =========== */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TododList pro</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="todo-card">
+      <h1>TodoList Pro</h1>
+      <form id="todo-form">
+        <input
+          type="text"
+          placeholder="Todo text"
+          id="inputValue"
+          autocomplete="off"
+        />
+        <button input type="submit" value="add" id="todo-add">
+          <svg
+            id="updataBtn"
+            style="display: none"
+            width="24"
+            height="24"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.25 1.01998C15.35 1.01998 19 5.05998 19 10.02C19 14.98 15.35 19.02 10.25 19.02C8.74263 19.0256 7.2564 18.6654 5.91878 17.9705C4.58115 17.2756 3.43204 16.2665 2.57 15.03L5.16 13.51C6.26 15.01 8.02 16.02 10 16.02C13.3 16.02 16 13.23 16 10.02C16 6.80998 13.3 4.01998 10 4.01998C8.03 4.01998 6.28 5.01998 5.18 6.50998L7 8.01998L1 10.02V3.01998L2.89 4.59998C3.76327 3.48228 4.88024 2.57877 6.15575 1.95834C7.43126 1.33792 8.83161 1.01697 10.25 1.01998Z"
+              fill="#ffffff"
+            />
+          </svg>
+
+          <svg
+            id="AddBtn"
+            width="29"
+            height="29"
+            viewBox="0 0 22 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M17 7V10H12V15H9V10H4V7H9V2H12V7H17Z" fill="#ffffff" />
+          </svg>
+        </button>
+      </form>
+
+      <div id="todo-item-card"></div>
+      <div id="todo-bottom-bar">
+        <div id="select-todo-item">
+          <span id="select-todo-bg"></span>
+          <p>
+            <span id="select-item">0</span>
+            <span>of</span>
+            <span id="length-item">0</span>
+          </p>
+        </div>
+        <button onclick="RemoveChecked()">
+          <span>Remove checked</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.12 10L15.65 13.53L13.53 15.65L10 12.12L6.46003 15.66L4.34003 13.54L7.88003 10L4.34003 6.46003L6.46003 4.34003L10 7.88003L13.54 4.35003L15.66 6.47003L12.12 10Z"
+              fill="#ffffff"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
